@@ -51,7 +51,7 @@ function exportData($conn, $userId, $lang) {
     $expenses = getExpenses($conn, $userId);
     
     // 設定 CSV 檔案標頭
-    header('Content-Type: application/vnd.ms-excel; charset=UTF-8');
+    header('Content-Type: text/csv; charset=UTF-8');
     header('Content-Disposition: attachment; filename="income_expense_data_' . date('Y-m-d') . '.csv"');
     
     // 創建檔案指標

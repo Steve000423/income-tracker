@@ -73,20 +73,16 @@ foreach ($expenses as $expense) {
 $netIncome = $totalIncome - $totalExpenses;
 
 echo json_encode([
-    'status' => 'success',
-    'message' => '',
-    'data' => [
-        'incomes' => $incomes,
-        'expenses' => $expenses,
-        'incomeByJobName' => $incomeByJobName,
-        'expensesByCategory' => $expensesByCategory,
-        'monthlyIncome' => $monthlyIncome,
-        'monthlyExpenses' => $monthlyExpenses,
-        'allMonths' => $allMonths,
-        'totalIncome' => round($totalIncome, 2),
-        'totalExpenses' => round($totalExpenses, 2),
-        'netIncome' => round($netIncome, 2)
-    ]
+    'incomes' => $incomes,
+    'expenses' => $expenses,
+    'incomeByJobName' => $incomeByJobName,
+    'expensesByCategory' => $expensesByCategory,
+    'monthlyIncome' => $monthlyIncome,
+    'monthlyExpenses' => $monthlyExpenses,
+    'allMonths' => $allMonths,
+    'totalIncome' => round($totalIncome, 2),
+    'totalExpenses' => round($totalExpenses, 2),
+    'netIncome' => round($netIncome, 2)
 ]);
 
 // --- 需要在 includes/income.php/expense.php 新增 getIncomeByJobNameByMonth, getExpensesByCategoryByMonth, getMonthlyIncomeByMonth, getMonthlyExpensesByMonth --- 
